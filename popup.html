@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="./src/configurations/styles.css">
+	<meta charset="utf-8">
+  </head>
+  <body>
+	
+	<div class="topSection" id="headerSection">
+	   <a href="https://cryptonics.consulting" target="_blank"><img class="logoImagePosition" align="left" src="/images/signorLogo2Transparent.png" alt="cryptonicsLogo" style="width:50px" id="mainLogoHeader">
+	   </a>
+	   
+	   <div class="dropdown">
+          <button class="dropbtn" id = "dropDownNet">Ethereum Mainnet</button>
+		  <div id="myDropdownNet" class="dropdown-content">
+			<a href="#home">Ethereum Mainnet</a>
+			<a href="#about">Ropsten Test Network</a>
+			<a href="#about">Rinkeby Test Network</a>
+            <a href="#contact">Localhost 8545</a>
+		  </div>
+      </div>	  
+	</div>	
+	
+	<div class="content" id="welcomeSection">
+           <p class="textWelcome" >Welcome to Cryptonics</p>
+		   <p class="textWelcomeSub" >Your gateway to a decentralized identity</p>
+		   <div>
+		      <img class="backgroundImagePosition" src="/images/project-signor.svg" alt="cryptonicsBackground" style="width:350px">
+		   </div>
+		   <div>
+		      <button class="buttonR center welcomeButtonMargin" id="toWelcomeSection" style="background-color:#6ec1e4 ! important;">Start</button>
+		   </div>	
+	</div>	
+	
+	<div class="content" id="newToCryptonics">
+           <p class="textSubTitle" style="font-weight: bold ! important;">New to Cryptonics?</p>
+		   <div class = "boxSelection">
+		      <p class="textSubTitle2" style="color:black ! important;">Yes</p>
+			  <p class="textSubTitle2" style="font-size: 14px ! important;">This will create a new wallet and a new seed phrase</p>
+			  <button class="buttonN center walletButtonMargin" id="createWallet" style="background-color:#6ec1e4 ! important;">Create Wallet</button>
+		   </div>
+		   <div class = "boxSelection">
+		      <p class="textSubTitle2" style="color:black ! important;">No</p>
+			  <p class="textSubTitle2" style="font-size: 14px ! important;">Import your wallet with the 12 words seed phrase</p>
+			  <button class="buttonN center walletButtonMargin" id="importWallet" style="background-color:#6ec1e4 ! important;">Import Wallet</button>
+		   </div>
+	</div>	
+	
+	<div class="content" id="createPasswordSection">
+        <p class="textSubTitle" style="font-weight: bold ! important;">Create password</p>
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+	    <div>
+			<label class="textSubTitle2 tagPwdIdentify" style="text-align: left ! important;"  for="pwd">New password (min 8 caract)</label>
+            <input  type="password" id="pwd" class="pwdIdentifyBox boxPasswordRecovery" minlength="8" maxlength="100" size="20" value="" style="font-size: 24px ! important;"/>
+        </div>
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+		<div>
+			<label class="textSubTitle2 tagPwdIdentify" style="text-align: left ! important;"  for="pwdConfirm">Confirm password</label>
+            <input type="password" id="pwdConfirm" class="pwdIdentifyBox boxPasswordRecovery" minlength="8" maxlength="100" size="20" value="" style="font-size: 24px ! important;"/>
+        </div>
+		<div style="margin-top:30px;">
+		    <input class="checkBox termsOfUseStyleBox" type="checkbox" id="confirmTerms" name="confirmTerms" value="False">
+            <label target="_blank" class="termsOfUse" for="confirmTerms"> I have read and accepted the </label><br>	
+			<a href="https://cryptonics.consulting" target="_blank"><p class="textSubTitle2 paddingTermsOfUse" style="color:#6ec1e4  ! important;">Terms of Use</p>
+			</a>
+        </div>
+		<div>
+		    <button class="buttonN center passwordButtonMargin" id="createPasswordButton" style="background-color:#6ec1e4 ! important;">Create</button>		
+        </div>
+		<div>
+		    <p class="textError justifyText" id="createPasswordError"></p>	
+        </div>
+	</div>	
+	
+	<div class="content" id="phraseCreationSection">
+	   <p class="textSubTitle" style="font-weight: bold ! important;">Secret phrase (recovery)</p>
+	   <p class="textSubTitle2 justifyText" style="font-size: 16px ! important;">Your secret backup phrase facilitates the recovery of your wallet. Please hand write it on a piece of PAPER</p>
+	   <p class="textSubTitle2 justifyText" style="color:black ! important;">WARNING: NEVER reveal your secret phrase to anyone. We will NEVER ask you for it. Anyone with your secret phrase can appropiate all your resources FOR EVER</p>
+	   <p class="textSubTitle2 justifyText" style="font-size: 14px ! important;">If you close this window now the process will not be finalized, a new phrase will be created next time you open the window</p>
+	   <div class = "boxSelectionShowWords">
+	    <p class="textSubTitle2 justifyText disableSelection" id="showSeedPhrase"></p>     
+	   </div>
+	   <div>
+	    <button class="buttonN center passwordButtonMargin paddingNextFromSeeSeed" id="walletCreateNext" style="background-color:#6ec1e4 ! important;">Next</button>	
+	   </div>
+	</div>
+
+	<div class="content" id="confirmPhraseSection">
+	   <button class="secondaryButton"  align="left" id="backToSeeSeedPhrase">< Back</button>
+	   <p class="textSubTitle marginSubTitleConfirmSeed" style="font-weight: bold ! important;">Confirm your secret phrase</p>
+	   
+	   <div class = "boxVerifySeed">
+	    <p class="textSubTitle2 justifyText disableSelection" id="verifySeedPhrase"></p>     
+	   </div>
+	   
+	   <div class="grid-container">
+	     <div class="item1">
+		   <button class="selectWords" id="word1"></button>		     
+		 </div>
+		 <div class="item2">
+		   <button class="selectWords" id="word2"></button>		     
+		 </div>
+		 <div class="item3">
+		   <button class="selectWords" id="word3"></button>		     
+		 </div>
+		 <div class="item4">
+		   <button class="selectWords" id="word4"></button>		     
+		 </div>
+		 <div class="item5">
+		   <button class="selectWords" id="word5"></button>		     
+		 </div>
+		 <div class="item6">
+		   <button class="selectWords" id="word6"></button>		     
+		 </div>
+		 <div class="item7">
+		   <button class="selectWords" id="word7"></button>		     
+		 </div>
+		 <div class="item8">
+		   <button class="selectWords" id="word8"></button>		     
+		 </div>
+		 <div class="item9">
+		   <button class="selectWords" id="word9"></button>		     
+		 </div>
+		 <div class="item10">
+		   <button class="selectWords" id="word10"></button>		     
+		 </div>
+		 <div class="item11">
+		   <button class="selectWords" id="word11"></button>		     
+		 </div>
+		 <div class="item12">
+		   <button class="selectWords" id="word12"></button>		     
+		 </div> 
+	   </div>
+	   <div>
+	    <button class="buttonN center marginVerifySeed" id="confirmSeedButton" style="background-color:#6ec1e4 ! important;">Next</button>	
+	   </div>
+	   
+	   <div>
+		    <p class="textError justifyText" id="verifySeedError">Select in order all the words from your seed phrase</p>	
+        </div>
+	</div>
+	
+	<div class="content" id="congratulationsSection">
+	   <p class="textSubTitle" style="font-weight: bold ! important;">Congratulations</p>
+	   <p class="textSubTitle2">Your new wallet has been created, and the secret phrase has been succesfully paired up with it</p>
+	   <div>
+	   <img class="center backgroundCongratulationsImage" src="/images/academy.png" alt="signorAcademy" style="width:250px">
+	   </div>
+	   <div>
+	    <button class="buttonR center endOnboardingButtonMargin" id="endOnboardingButton" style="background-color:#6ec1e4 ! important;">Go to Home</button>	
+	   </div>
+	</div>	
+	
+	<div class="content boxHomeSubHeader" id="homeSectionHeader">
+	    <div class="inline">
+	     <p class="textSubTitle2 subHeaderNetStatusMargin" style="font-size: 12px ! important;">&#9673 Website not connected</p>
+		 </div>
+		 <div class="inline">
+		    <div class="vertical"> 
+		       <p  class="textSubTitle subHeaderAccountTitleMargin" style="font-size: 18px ! important;" id="partialAddressTitleString">Account 1</p>		 
+			   <p  class="textSubTitle2 subHeaderAccountMargin" style="font-size: 14px ! important;" id="partialAddressString">ERROR</p>
+			 </div>
+		 </div>
+	</div>
+	<div class="content" id="homeSectionBody">
+	</div>
+	
+	<div class="content" id="identifyUser">
+	    <div>
+	       <img class="center logoIdentifyMargin" style="width:225px" src="/images/academy.png" alt="cryptonicsLogo" id="imgBackgroundIdentifySect">	 	
+		   <p class="textWelcome textTitleIdentify" > Welcome back!</p>
+		   <p class="textSubTitle2 textSubTitleIdentify" > Your gate to a decentralized identity</p>
+		</div>
+		<div>
+			<label class="textSubTitle2 tagPwdIdentify"  for="pwdIdentifySection">Password</label>
+            <input type="password" id="pwdIdentifySection" class="pwdIdentifyBox" minlength="8" maxlength="100" size="20" value="" style="font-size: 24px ! important;"/>
+			<button class="buttonR center unlockIdentify" id="unlockButtonIdentify" style="background-color:#6ec1e4 ! important;">Unlock</button>
+        </div>
+		<p class="textSubTitle2 restoreIdentify" id="restoreWalletFromWelcome">Restore account with seed phrase</p>
+	</div>
+	
+	<div class="content" id="recoverWallet">
+	    <button class="secondaryButton"  align="left" id="backToMain">< Back</button> 
+		<div>	
+         <p class="textSubTitle2" style="color:black ! important;"> Write your seed phrase (12 words)</p>		
+		<label align="left"   class="textSubTitle2 seedRecoveryTagMargin" for="seedPhraseRecovery"></label>
+        <textarea align="center"  class = "seedBoxRecovery" id="seedPhraseRecovery" name="seedPhraseRecovery"></textarea>
+		</div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<div class ="marginRecoveryPass">
+		<div>
+			<label class="textSubTitle2 tagPwdIdentify marginRecoveryPass"  for="pwdRecovery">New password (min 8 caract)</label>
+            <input  type="password" id="pwdRecovery" class="pwdIdentifyBox boxPasswordRecovery" minlength="8" maxlength="100" size="20" value="" style="font-size: 24px ! important;"/>
+        </div>
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+		&nbsp;&nbsp;
+		<div>
+			<label class="textSubTitle2 tagPwdIdentify"  for="pwdRecoveryConfirm">Confirm password</label>
+            <input type="password" id="pwdRecoveryConfirm" class="pwdIdentifyBox boxPasswordRecovery" minlength="8" maxlength="100" size="20" value="" style="font-size: 24px ! important;"/>
+        </div>
+		</div>
+		
+        <div>			
+		   <button class="buttonR center recoverWalletButtonMargin" id="recoverWalletButton" style="background-color:#6ec1e4 ! important;">Recover Wallet</button>		
+		   <p class="textError justifyText" id="recoverWalletError"></p>
+		</div>	
+	</div>
+	
+	<script type="module" src="./popup.js"></script>
+  </body>
+</html>

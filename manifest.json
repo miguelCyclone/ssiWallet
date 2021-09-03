@@ -1,0 +1,33 @@
+{
+  "name": "Cryptonics Wallet",
+  "version": "1.0",
+  "description": "Decentralized identity wallet",
+  "permissions": ["activeTab","declarativeContent", "storage", "scripting", "notifications", "tabs"],
+  "host_permissions": ["http://*/"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/"],
+      "js": ["contentScript.js"],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/signorLogo2.png",
+      "32": "images/signorLogo2.png",
+      "48": "images/signorLogo2.png",
+      "128": "images/signorLogo2.png"
+    }
+  },
+  "icons": {
+    "16": "images/signorLogo2.png",
+    "32": "images/signorLogo2.png",
+    "48": "images/signorLogo2.png",
+    "128": "images/signorLogo2.png"
+  },
+  "manifest_version": 3
+}

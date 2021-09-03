@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./../../../configurations/styles.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+    <div class="topSection" id="headerSection">
+        <a href="https://cryptonics.consulting" target="_blank"><img class="logoImagePosition" align="left" src="/images/signorLogo2Transparent.png" alt="cryptonicsLogo" style="width:50px" id="mainLogoHeader">
+        </a>
+
+        <div class="inline">
+          <button class="secondaryButton logOutMargin"  align="right" id="logout"> Logout </button> 
+        </div>
+        
+        <div class="dropdown">
+           <button class="dropbtn" id = "dropDownNet">Ethereum Mainnet</button>
+           <div id="myDropdownNet" class="dropdown-content">
+             <a href="#home">Ethereum Mainnet</a>
+             <a href="#about">Ropsten Test Network</a>
+             <a href="#about">Rinkeby Test Network</a>
+             <a href="#contact">Localhost 8545</a>
+           </div>
+       </div>	  
+     </div>
+
+     <div class="content boxPopUp" id="boxPopUp">
+      <p class="textSubTitle boxPopUpTextMarg " id="boxPopUpText" style="font-size: 22px ! important;">Loading</p>      
+     </div>
+
+    <div class="content boxHomeSubHeader" id="homeSectionHeader">
+        <div class="inline">
+         <button class=" subHeaderNetStatusMargin connectWebsite" id="websiteStatusID" style="font-size: 12px ! important;">&#9673 Website not connected</button>
+        </div>
+        <div class="inline dropdownAcc">
+               <p  class="textSubTitle subHeaderAccountTitleMargin accAuxdbt" style="font-size: 18px ! important;" id="partialAddressTitleString">DID 1</p>		 
+               <div id="selectAccDropDown" class="dropdown-content">
+                <a href="#home"> DID 1 (Ethereum network)</a>
+                <a href="#about">DID 2 (Terra network)</a>
+                <a href="#about">Create new DID</a>
+              </div>
+               <p  class="textSubTitle2 subHeaderAccountMargin" style="font-size: 13px ! important;" id="partialAddressString">ERROR</p>
+        </div>
+        <div class="inline">
+          <button class="auxFunc" id="auxFunction"> Aux button </button> 
+        </div>
+    </div>
+
+    <div class="content boxHomeSubHeader2" id="homeSectionSubHeader">
+      <div class="inline">
+       <button class="buttonR actionButton actionButtonMargin" id="actionA" style="background-color:#6ec1e4 ! important;">Action A</button>		
+      </div>
+      <div class="inline">
+        <button class="buttonR actionButton actionButtonMargin"id="actionB" style="background-color:#6ec1e4 ! important;">Action B</button>		
+      </div>
+      <div class="inline">
+        <button class="buttonR actionButton actionButtonMargin" id="actionC" style="background-color:#6ec1e4 ! important;">Action C</button>		
+      </div>
+    </div>
+
+    <div class="content" id="homeSectionBody">
+      <p class="textSubTitle " style="font-size: 16px ! important;" id="chooseKeyAuxTitle">A site is sending you a request. Choose the key you want to use</p>
+      <div id="authenticateKeysBox">
+        <p  class="textSubTitle2 keyTitleMarg" style="font-size: 16px ! important;" id="authSectionTitle">Authentication keys</p>   
+        <div id="authSection" class="vertical keysShowSection">
+          <button class="selectWords center addKeyMargin" id="addKeyAuth">Add Key</button>
+          <div id="authObj_CLEAR" >
+            <p class="textSubTitle2 keyTitleMarg inline" style="font-size: 16px ! important;" id="authKeyTitle_clear" name="keyTitle">Keeey </p> 
+            <button class="selectWords auxButtonMarg2 inline" id="chooseAuth_clear" name="chooseKey">Choose</button>	  
+            <button class="selectWords auxButtonMarg inline" id="deleateAuth_clear" name="deleateKey">X</button>	
+          </div>	
+        </div>
+      </div>
+      <div id="signKeysBox">
+        <p  class="textSubTitle2 keyTitleMarg" style="font-size: 16px ! important;" id="signSectionTitle">Signing keys</p>     
+          <div id="signSection" class="vertical keysShowSection">
+            <button class="selectWords center addKeyMargin" id="addKeySign">Add Key</button>
+            <div id="signObj_CLEAR" >   
+              <p class="textSubTitle2 keyTitleMarg inline" style="font-size: 16px ! important;" id="signKeyTitle_clear" name="keyTitle">Keeey 	</p>   
+                <button class="selectWords auxButtonMarg2 " id="chooseSign_clear" name="chooseKey">Choose</button>   
+                <button class="selectWords auxButtonMarg" id="deleateSign_clear" name="deleateKey">X</button>	   
+            </div>
+          </div> 		
+      </div>
+      <div id="encryptKeysBox">
+        <p  class="textSubTitle2 keyTitleMarg" style="font-size: 16px ! important;" id="encryptSectionTitle">Encryption keys</p>  
+          <div id="encryptSection" class="vertical keysShowSection">
+            <button class="selectWords center addKeyMargin" id="addKeyEncrypt">Add Key</button>
+            <div id="encryptObj_CLEAR">	    
+              <p  class="textSubTitle2 keyTitleMarg inline" style="font-size: 16px ! important;" id="encryptKeyTitle_clear" name="keyTitle">Keeey </p>
+                <button class="selectWords auxButtonMarg2" id="chooseEncrypt_clear" name="chooseKey">Choose</button>   
+                <button class="selectWords auxButtonMarg" id="deleateEncrypt_clear" name="deleateKey">X</button>	
+            </div>
+          </div> 	   		
+      </div>
+    </div>
+
+    <div class="content" id="processMessage">
+      <p class="textSubTitle2 titleProcessAux" style="font-size: 18px ! important;" id="messageOriginTitle">Origin: </p>
+      <p class="textSubTitle2 contentProcessAux" style="font-size: 16px ! important;" id="messageOrigin"></p> 
+      <p class="textSubTitle2 titleProcessAux" style="font-size: 18px ! important;" id="messageContentTitle"></p>
+      <p class="textSubTitle2 contentProcessAux" style="font-size: 16px ! important;" id="messageContent"></p> 
+      <div class='inline'>
+        <button class="buttonR confirmProcessMessage" id="signMessageButtonMain" style="background-color:#6ec1e4 ! important;"></button>		
+      </div>
+      <div class='inline'>
+        <button class="buttonR confirmProcessMessage cancelProcessMessage" id="cancelMessageButtonMain">Cancel</button>		
+      </div>
+    </div>
+
+    <script type="module" src="./home.js"></script>
+</body>
+</html>
