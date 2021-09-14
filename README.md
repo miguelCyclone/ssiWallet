@@ -3,11 +3,11 @@
 # License
 * Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
-This is a PoC SSI wallet. It is uploaded to GitHub for showcase and educational purposes.
+This is an MvP SSI wallet. It is uploaded to GitHub for showcase and educational purposes.
 It is not intended to be use under commercial activities, please read the license file.
 
 # Goal
-* Create a PoC for an SSI wallet that follows the W3 SSI standards
+* Create an MvP for an SSI wallet that follows the W3 SSI standards
 
 # NPM packages 
 * They have been browersify under the bundles folder
